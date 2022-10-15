@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário | Validação</title>
+</head>
+<body>
+    <div class="box">
+        <form id="form">
+            <fieldset>
+                <legend><b>Fórmulário de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo" class="inputUser" oninput="NameValidate()">
+                    <span class="span-avisos">Nome completo obrigatório!</span>
+                    <span class="span-confirmado">Confirmado!</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" placeholder="Email" class="inputUser" oninput="emailValidate()">
+                    <span class="span-avisos">Email deve ser válido!</span>
+                    <span class="span-confirmado">Confirmado!</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="inputUser" oninput="cidadeValidate()">
+                    <span class="span-avisos">Informe uma Cidade!</span>
+                    <span class="span-confirmado">Confirmado!</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" placeholder="Estado" class="inputUser" oninput="estadoValidate()">
+                    <span class="span-avisos">Informe um Estado!</span>
+                    <span class="span-confirmado">Confirmado!</span>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
