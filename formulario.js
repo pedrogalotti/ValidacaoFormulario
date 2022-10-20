@@ -4,6 +4,15 @@ const avisos = document.querySelectorAll('.span-avisos');
 const confirmado = document.querySelectorAll('.span-confirmado');
 const emailRegex = /^\w+([-+.']\w+)*@\w+([_.]\w+)*\.\w+([-.]\w+)*$/;
 
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  NameValidate();
+  emailValidate();
+  cidadeValidate();
+  estadoValidate();
+
+});
+
 function setError(index){
   dados_cliente[index].style.border = "1px solid red";
   dados_cliente[index].style.borderRadius = "8px";
@@ -44,7 +53,7 @@ function cidadeValidate(){
 }
 
 function estadoValidate(){
-  if(dados_cliente[3].value.length < 0){
+  if(dados_cliente[3].value.length < 1){
     setError(3);
   } else {
     removeError(3);
